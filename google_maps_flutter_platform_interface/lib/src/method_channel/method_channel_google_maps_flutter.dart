@@ -411,7 +411,7 @@ class MethodChannelGoogleMapsFlutter extends GoogleMapsFlutterPlatform {
     required int mapId,
   }) async {
     final List<dynamic> latLng = (await channel(mapId)
-        .invokeMapMethod<String, dynamic>('map#getCenter'))!;
+        .invokeListMethod<String, dynamic>('map#getCenter'))!;
 
     return LatLng(latLng[0], latLng[1]);
   }
