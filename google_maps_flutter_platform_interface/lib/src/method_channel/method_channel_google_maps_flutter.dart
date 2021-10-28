@@ -391,7 +391,7 @@ class MethodChannelGoogleMapsFlutter extends GoogleMapsFlutterPlatform {
   Future<void> centerMarkerBounds({
     required int mapId,
   }) async {
-    (await channel(mapId).invokeMapMethod<String, dynamic>('showAnnotations'))!;
+    (await channel(mapId).invokeMapMethod<String, dynamic>('showAnnotations'));
   }
 
   @override
