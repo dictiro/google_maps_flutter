@@ -10,6 +10,7 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Point;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -19,6 +20,7 @@ import androidx.lifecycle.DefaultLifecycleObserver;
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleOwner;
 import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.SnapshotReadyCallback;
 import com.google.android.gms.maps.GoogleMapOptions;
@@ -78,6 +80,7 @@ final class GoogleMapController
   private final CirclesController circlesController;
   private final TileOverlaysController tileOverlaysController;
   private List<Object> initialMarkers;
+  private List<Object> markers;
   private List<Object> initialPolygons;
   private List<Object> initialPolylines;
   private List<Object> initialCircles;
@@ -167,6 +170,18 @@ final class GoogleMapController
           result.success(Convert.cameraPositionToJson(getCameraPosition()));
           break;
         }
+      case "map#getCenter":
+      {
+        CameraPosition coordinate = googleMap.getCameraPosition();
+        result.success(Convert.latLngToJson(coordinate.target));
+        break;
+      }
+      case "showAnnotations":
+      {
+        centerMarkerBounds();
+        result.success(null);
+        break;
+      }
       case "map#getVisibleRegion":
         {
           if (googleMap != null) {
@@ -418,6 +433,22 @@ final class GoogleMapController
         result.notImplemented();
     }
   }
+
+  public void centerMarkerBounds() {
+    LatLngBounds.Builder bounds = LatLngBounds.builder();
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+      markersController.markerIdToMarker.values().forEach(m -> bounds.include(m.getPosition()));
+    }
+    googleMap.animateCamera(CameraUpdateFactory.newLatLngBounds(bounds.build(), 15));
+  }
+
+  @Override
+  public void onMapClick(LatLng latLng) {
+    final Map<String, Object> arguments = new HashMap<>(2);
+    arguments.put("position", Convert.latLngToJson(latLng));
+    methodChannel.invokeMethod("map#onTap", arguments);
+  }
+
 
   @Override
   public void onMapClick(LatLng latLng) {

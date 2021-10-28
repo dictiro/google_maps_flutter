@@ -15,13 +15,15 @@ import java.util.Map;
 
 class MarkersController {
 
-  private final Map<String, MarkerController> markerIdToController;
+  public final Map<String, MarkerController> markerIdToController;
+  public final Map<String, Marker> markerIdToMarker;
   private final Map<String, String> googleMapsMarkerIdToDartMarkerId;
   private final MethodChannel methodChannel;
   private GoogleMap googleMap;
 
   MarkersController(MethodChannel methodChannel) {
     this.markerIdToController = new HashMap<>();
+    this.markerIdToMarker = new HashMap<>();
     this.googleMapsMarkerIdToDartMarkerId = new HashMap<>();
     this.methodChannel = methodChannel;
   }
@@ -56,6 +58,7 @@ class MarkersController {
       }
       String markerId = (String) rawMarkerId;
       final MarkerController markerController = markerIdToController.remove(markerId);
+      markerIdToMarker.remove(markerId);
       if (markerController != null) {
         markerController.remove();
         googleMapsMarkerIdToDartMarkerId.remove(markerController.getGoogleMapsMarkerId());
@@ -160,6 +163,7 @@ class MarkersController {
     final Marker marker = googleMap.addMarker(markerOptions);
     MarkerController controller = new MarkerController(marker, consumeTapEvents);
     markerIdToController.put(markerId, controller);
+    markerIdToMarker.put(markerId, marker);
     googleMapsMarkerIdToDartMarkerId.put(marker.getId(), markerId);
   }
 

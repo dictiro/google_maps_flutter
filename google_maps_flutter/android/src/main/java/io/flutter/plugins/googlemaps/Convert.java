@@ -6,6 +6,7 @@ package io.flutter.plugins.googlemaps;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Camera;
 import android.graphics.Point;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -229,6 +230,13 @@ class Convert {
     Object x = toMap(o).get("x");
     Object y = toMap(o).get("y");
     return new Point((int) x, (int) y);
+  }
+
+  static Map<String, Double> targetToJson(CameraPosition position) {
+    final Map<String, Double> data = new HashMap<String, Double>(2);
+    data.put("latitude", position.target.latitude);
+    data.put("longitude", position.target.longitude);
+    return data;
   }
 
   static Map<String, Integer> pointToJson(Point point) {

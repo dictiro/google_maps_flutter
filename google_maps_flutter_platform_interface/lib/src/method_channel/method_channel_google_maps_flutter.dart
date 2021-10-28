@@ -388,6 +388,13 @@ class MethodChannelGoogleMapsFlutter extends GoogleMapsFlutterPlatform {
   }
 
   @override
+  Future<void> centerMarkerBounds({
+    required int mapId,
+  }) async {
+    (await channel(mapId).invokeMapMethod<String, dynamic>('showAnnotations'))!;
+  }
+
+  @override
   Future<LatLngBounds> getVisibleRegion({
     required int mapId,
   }) async {
@@ -397,6 +404,16 @@ class MethodChannelGoogleMapsFlutter extends GoogleMapsFlutterPlatform {
     final LatLng northeast = LatLng.fromJson(latLngBounds['northeast'])!;
 
     return LatLngBounds(northeast: northeast, southwest: southwest);
+  }
+
+  @override
+  Future<LatLng> getCenter({
+    required int mapId,
+  }) async {
+    final Map<String, dynamic> latLng = (await channel(mapId)
+        .invokeMapMethod<String, dynamic>('map#getCenter'))!;
+
+    return LatLng(latLng[0], latLng[1]);
   }
 
   @override

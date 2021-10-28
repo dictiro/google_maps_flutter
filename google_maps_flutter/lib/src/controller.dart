@@ -282,6 +282,10 @@ class GoogleMapController {
         .isMarkerInfoWindowShown(markerId, mapId: mapId);
   }
 
+  Future<LatLng> getCenter() {
+    return GoogleMapsFlutterPlatform.instance.getCenter(mapId: mapId);
+  }
+
   /// Returns the current zoom level of the map
   Future<double> getZoomLevel() {
     return GoogleMapsFlutterPlatform.instance.getZoomLevel(mapId: mapId);
