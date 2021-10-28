@@ -2,6 +2,10 @@ google_maps_flutter
 2.14
 file:///Users/felixjunghans/projekte/google_maps_flutter/google_maps_flutter/
 file:///Users/felixjunghans/projekte/google_maps_flutter/google_maps_flutter/lib/
+google_maps_flutter_platform_interface
+2.12
+file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/git/google_maps_flutter-added9250a9f7c84a315ad1f5035c26c6fe456bf/google_maps_flutter_platform_interface/
+file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/git/google_maps_flutter-added9250a9f7c84a315ad1f5035c26c6fe456bf/google_maps_flutter_platform_interface/lib/
 archive
 2.12
 file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/hosted/pub.dartlang.org/archive-3.1.2/
@@ -54,10 +58,6 @@ flutter_plugin_android_lifecycle
 2.12
 file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-2.0.4/
 file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-2.0.4/lib/
-google_maps_flutter_platform_interface
-2.12
-file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/hosted/pub.dartlang.org/google_maps_flutter_platform_interface-2.1.3/
-file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/hosted/pub.dartlang.org/google_maps_flutter_platform_interface-2.1.3/lib/
 matcher
 2.12
 file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/hosted/pub.dartlang.org/matcher-0.12.10/

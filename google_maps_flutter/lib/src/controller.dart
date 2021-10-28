@@ -282,6 +282,10 @@ class GoogleMapController {
         .isMarkerInfoWindowShown(markerId, mapId: mapId);
   }
 
+  Future<void> centerMarkerBounds() {
+    return GoogleMapsFlutterPlatform.instance.centerMarkerBounds(mapId: mapId);
+  }
+
   Future<LatLng> getCenter() {
     return GoogleMapsFlutterPlatform.instance.getCenter(mapId: mapId);
   }
