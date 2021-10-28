@@ -435,11 +435,13 @@ final class GoogleMapController
   }
 
   public void centerMarkerBounds() {
-    LatLngBounds.Builder bounds = LatLngBounds.builder();
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-      markersController.markerIdToMarker.values().forEach(m -> bounds.include(m.getPosition()));
+    if(!markersController.markerIdToMarker.isEmpty()) {
+      LatLngBounds.Builder bounds = LatLngBounds.builder();
+      if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+        markersController.markerIdToMarker.values().forEach(m -> bounds.include(m.getPosition()));
+      }
+      googleMap.animateCamera(CameraUpdateFactory.newLatLngBounds(bounds.build(), 15));
     }
-    googleMap.animateCamera(CameraUpdateFactory.newLatLngBounds(bounds.build(), 15));
   }
 
   @Override
