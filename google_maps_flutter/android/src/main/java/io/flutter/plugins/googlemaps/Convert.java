@@ -232,8 +232,8 @@ class Convert {
     Location location = new Location("custom");
     location.setLatitude((double)data.get("latitude"));
     location.setLongitude((double)data.get("longitude"));
-    location.setAccuracy((float)data.get("accuracy"));
-    location.setBearing((float)data.get("bearing"));
+    location.setAccuracy((Double.valueOf((double)data.get("accuracy")).floatValue()));
+    location.setBearing((Double.valueOf((double)data.get("bearing")).floatValue()));
     return location;
   }
 
