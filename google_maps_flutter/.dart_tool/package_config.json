@@ -15,7 +15,7 @@
     },
     {
       "name": "archive",
-      "rootUri": "file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/hosted/pub.dartlang.org/archive-3.1.2",
+      "rootUri": "file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/hosted/pub.dartlang.org/archive-3.1.6",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -27,7 +27,7 @@
     },
     {
       "name": "async",
-      "rootUri": "file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.8.1",
+      "rootUri": "file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.8.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -39,7 +39,7 @@
     },
     {
       "name": "characters",
-      "rootUri": "file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/hosted/pub.dartlang.org/characters-1.1.0",
+      "rootUri": "file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/hosted/pub.dartlang.org/characters-1.2.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -141,7 +141,7 @@
     },
     {
       "name": "google_maps_flutter_platform_interface",
-      "rootUri": "file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/git/google_maps_flutter-added9250a9f7c84a315ad1f5035c26c6fe456bf/google_maps_flutter_platform_interface",
+      "rootUri": "file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/git/google_maps_flutter-d9e97f82641008fdbe7d5af7aa8b0c1fbb984c59/google_maps_flutter_platform_interface",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -177,7 +177,7 @@
     },
     {
       "name": "matcher",
-      "rootUri": "file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/hosted/pub.dartlang.org/matcher-0.12.10",
+      "rootUri": "file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/hosted/pub.dartlang.org/matcher-0.12.11",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -219,7 +219,7 @@
     },
     {
       "name": "platform",
-      "rootUri": "file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/hosted/pub.dartlang.org/platform-3.0.0",
+      "rootUri": "file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/hosted/pub.dartlang.org/platform-3.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -237,9 +237,9 @@
     },
     {
       "name": "process",
-      "rootUri": "file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/hosted/pub.dartlang.org/process-4.2.3",
+      "rootUri": "file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/hosted/pub.dartlang.org/process-4.2.4",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.14"
     },
     {
       "name": "pub_semver",
@@ -333,19 +333,19 @@
     },
     {
       "name": "test",
-      "rootUri": "file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/hosted/pub.dartlang.org/test-1.17.10",
+      "rootUri": "file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/hosted/pub.dartlang.org/test-1.17.12",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "test_api",
-      "rootUri": "file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/hosted/pub.dartlang.org/test_api-0.4.2",
+      "rootUri": "file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/hosted/pub.dartlang.org/test_api-0.4.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "test_core",
-      "rootUri": "file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/hosted/pub.dartlang.org/test_core-0.4.0",
+      "rootUri": "file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/hosted/pub.dartlang.org/test_core-0.4.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -357,13 +357,13 @@
     },
     {
       "name": "vector_math",
-      "rootUri": "file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.0",
+      "rootUri": "file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.1",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.14"
     },
     {
       "name": "vm_service",
-      "rootUri": "file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/hosted/pub.dartlang.org/vm_service-7.1.1",
+      "rootUri": "file:///Volumes/Macintosh%20HD/Users/felixjunghans/Projekte/tools/flutter/.pub-cache/hosted/pub.dartlang.org/vm_service-7.3.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -404,7 +404,7 @@
       "languageVersion": "2.14"
     }
   ],
-  "generated": "2021-10-28T19:57:09.578979Z",
+  "generated": "2022-01-19T12:18:28.863168Z",
   "generator": "pub",
-  "generatorVersion": "2.14.2"
+  "generatorVersion": "2.15.1"
 }
