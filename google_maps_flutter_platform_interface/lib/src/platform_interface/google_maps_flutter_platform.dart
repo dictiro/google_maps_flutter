@@ -268,7 +268,7 @@ abstract class GoogleMapsFlutterPlatform extends PlatformInterface {
   }
 
   void setLocation(
-    Location location, {
+    Location? location, {
     required int mapId,
   }) {
     throw UnimplementedError('setLocation() has not been implemented.');
