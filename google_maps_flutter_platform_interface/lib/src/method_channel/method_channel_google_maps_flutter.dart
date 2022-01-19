@@ -397,11 +397,11 @@ class MethodChannelGoogleMapsFlutter extends GoogleMapsFlutterPlatform {
 
   @override
   void setLocation(
-    Location location, {
+    Location? location, {
     required int mapId,
   }) async {
     return channel(mapId)
-        .invokeMethod<void>('map#locationUpdate', location.toJson());
+        .invokeMethod<void>('map#locationUpdate', location?.toJson());
   }
 
   @override

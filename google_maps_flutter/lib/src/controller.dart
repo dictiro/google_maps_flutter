@@ -286,7 +286,7 @@ class GoogleMapController {
     return GoogleMapsFlutterPlatform.instance.centerMarkerBounds(mapId: mapId);
   }
 
-  void setLocation(Location location) {
+  void setLocation(Location? location) {
     return GoogleMapsFlutterPlatform.instance
         .setLocation(location, mapId: mapId);
   }

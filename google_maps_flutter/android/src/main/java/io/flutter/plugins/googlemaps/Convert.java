@@ -224,6 +224,10 @@ class Convert {
   }
 
   static Location toLocation(Object o) {
+    if(o == null) {
+      return new Location("custom");
+    }
+
     final Map<?, ?> data = toMap(o);
     Location location = new Location("custom");
     location.setLatitude((double)data.get("latitude"));
