@@ -10,6 +10,7 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Point;
+import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -24,6 +25,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.SnapshotReadyCallback;
 import com.google.android.gms.maps.GoogleMapOptions;
+import com.google.android.gms.maps.LocationSource;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.CameraPosition;
@@ -58,6 +60,7 @@ final class GoogleMapController
 
   private static final String TAG = "GoogleMapController";
   private final int id;
+  private final CustomLocationProvider customLocationProvider = new  CustomLocationProvider();
   private final MethodChannel methodChannel;
   private final GoogleMapOptions options;
   @Nullable private MapView mapView;
@@ -132,6 +135,7 @@ final class GoogleMapController
   @Override
   public void onMapReady(GoogleMap googleMap) {
     this.googleMap = googleMap;
+    this.googleMap.setLocationSource(customLocationProvider);
     this.googleMap.setIndoorEnabled(this.indoorEnabled);
     this.googleMap.setTrafficEnabled(this.trafficEnabled);
     this.googleMap.setBuildingsEnabled(this.buildingsEnabled);
@@ -170,6 +174,11 @@ final class GoogleMapController
           result.success(Convert.cameraPositionToJson(getCameraPosition()));
           break;
         }
+      case "map#locationUpdate":
+      {
+        Location location = Convert.toLocation(call.argument);
+        customLocationProvider.onLocationChanged(location);
+      }
       case "map#getCenter":
       {
         CameraPosition coordinate = googleMap.getCameraPosition();

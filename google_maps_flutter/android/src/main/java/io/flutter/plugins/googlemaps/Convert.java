@@ -8,6 +8,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Camera;
 import android.graphics.Point;
+import android.location.Location;
+
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.model.BitmapDescriptor;
@@ -219,6 +221,16 @@ class Convert {
 
   static Object latLngToJson(LatLng latLng) {
     return Arrays.asList(latLng.latitude, latLng.longitude);
+  }
+
+  static Location toLocation(Object o) {
+    final Map<?, ?> data = toMap(o);
+    Location location = new Location("custom");
+    location.setLatitude((double)data.get("latitude"));
+    location.setLongitude((double)data.get("longitude"));
+    location.setAccuracy((float)data.get("accuracy"));
+    location.setBearing((float)data.get("bearing"));
+    return location;
   }
 
   static LatLng toLatLng(Object o) {

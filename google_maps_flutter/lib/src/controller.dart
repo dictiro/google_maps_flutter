@@ -286,6 +286,11 @@ class GoogleMapController {
     return GoogleMapsFlutterPlatform.instance.centerMarkerBounds(mapId: mapId);
   }
 
+  Future<void> setLocation(Location location) {
+    return GoogleMapsFlutterPlatform.instance
+        .setLocation(location, mapId: mapId);
+  }
+
   Future<LatLng> getCenter() {
     return GoogleMapsFlutterPlatform.instance.getCenter(mapId: mapId);
   }

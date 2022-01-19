@@ -14,6 +14,8 @@ import 'package:google_maps_flutter_platform_interface/google_maps_flutter_platf
 import 'package:google_maps_flutter_platform_interface/src/method_channel/method_channel_google_maps_flutter.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
+import '../types/location.dart';
+
 /// The interface that platform-specific implementations of `google_maps_flutter` must extend.
 ///
 /// Avoid `implements` of this interface. Using `implements` makes adding any new
@@ -262,7 +264,14 @@ abstract class GoogleMapsFlutterPlatform extends PlatformInterface {
   Future<void> centerMarkerBounds({
     required int mapId,
   }) {
-    throw UnimplementedError('getCenter() has not been implemented.');
+    throw UnimplementedError('centerMarkerBounds() has not been implemented.');
+  }
+
+  void setLocation(
+    Location location, {
+    required int mapId,
+  }) {
+    throw UnimplementedError('setLocation() has not been implemented.');
   }
 
   /// Returns the current center target of the map.

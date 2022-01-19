@@ -13,6 +13,7 @@ import 'package:flutter/services.dart';
 import 'package:google_maps_flutter_platform_interface/google_maps_flutter_platform_interface.dart';
 import 'package:stream_transform/stream_transform.dart';
 
+import '../../google_maps_flutter_platform_interface.dart';
 import '../types/tile_overlay_updates.dart';
 import '../types/utils/tile_overlay.dart';
 
@@ -392,6 +393,15 @@ class MethodChannelGoogleMapsFlutter extends GoogleMapsFlutterPlatform {
     required int mapId,
   }) async {
     (await channel(mapId).invokeMapMethod<String, dynamic>('showAnnotations'));
+  }
+
+  @override
+  void setLocation(
+    Location location, {
+    required int mapId,
+  }) async {
+    return channel(mapId)
+        .invokeMethod<void>('map#locationUpdate', location.toJson());
   }
 
   @override
