@@ -176,7 +176,7 @@ final class GoogleMapController
         }
       case "map#locationUpdate":
       {
-        Location location = Convert.toLocation(call.argument);
+        Location location = Convert.toLocation(call.arguments);
         customLocationProvider.onLocationChanged(location);
       }
       case "map#getCenter":
